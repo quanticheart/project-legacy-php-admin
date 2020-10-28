@@ -1,0 +1,339 @@
+/*
+ * jQuery Dynatable plugin 0.3.1
+ *
+ * Copyright (c) 2014 Steve Schwartz (JangoSteve)
+ *
+ * Dual licensed under the AGPL and Proprietary licenses:
+ *   http://www.dynatable.com/license/
+ *
+ * Date: Tue Jan 02 2014
+ */
+ .bttable{
+ margin-bottom:2px;
+  border-radius: 0px !important;
+  text-align: right;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1em;
+  text-align: left;
+  
+  padding: 5px;
+ }
+ 
+ .seh{
+	 
+	top:30px; 
+ }
+.thumbnail{
+text-decoration:none !important;
+margin-bottom: 0px !important;
+margin-left: -10px !important;
+}
+
+tbody:hover td  .thumbnail{
+    opacity: 0.2;
+	color: transparent;
+	text-shadow: 0 0 8px #aaa;
+}
+
+tbody:hover tr:hover td  .thumbnail{
+    opacity: 1;
+	color:#2980b9;
+	text-shadow: 0 0 0 #fff;
+}
+
+.thumbnail img::selection  , .thumbnail h5::selection {
+background:none !important;
+}
+.dynatable{
+    position: relative;
+    clear: both;
+    *zoom: 1;
+    zoom: 1;
+	border-collapse:collapse;
+	border-spacing:0;
+	margin:15px;
+}
+ 
+.box {
+  margin-top:2px;
+  width: 30px;
+}
+.top {
+  color: white;
+  cursor: pointer;
+}
+
+.bottom {
+  margin-top:11px !important;
+  width: 100%;
+ 
+  background-color:#fff;
+  border: 1px solid #dcdcdc;
+  color: black;
+  display: none;
+  position:absolute;
+  margin-left:-9px;
+  padding: 12px;
+  z-index:2;
+}
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+	border-spacing:0;
+	border: 1px solid #dcdcdc;
+}
+
+
+table thead th{
+ border: 1px solid #dcdcdc;
+  font-family: Arial,Helvetica,sans-serif;
+   font-size: 1em;
+    text-align: left;
+    padding : 0.6%;
+	margin-left:8px;
+}
+
+
+
+table tbody td{
+background: #fafafa;
+  font-family: Arial,Helvetica,sans-serif;
+   font-size: 1em;
+    text-align: left;
+    padding: 0.6%;
+}
+
+
+th a {
+  color: #34495e;
+}
+th a:hover {
+  text-decoration: none;
+}
+
+
+tbody:hover td {
+	color: transparent;
+	text-shadow: 0 0 3px #aaa;
+}
+
+tbody:hover tr:hover td {
+	color: #444;
+	text-shadow: 0 0 0 #fff;
+}
+
+.table_nome{
+width:98% !important;
+padding-left:4px !important;
+ background-color:#fff !important;
+ margin-left:-4px !important;
+
+margin-top: -2px;
+}
+
+.dynatable-search {
+    float: right!important;	
+	  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                 not supported by any browser */
+								 
+								margin-top:15px !important;
+}
+
+.dynatable-search  input{
+  margin-bottom:8px;
+  text-align: right;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1em;
+  text-align: left;
+  border: 1px solid #dcdcdc;
+  padding: 5px;
+ 
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+
+.dynatable-per-page-select{
+width:100px;
+-webkit-appearance: none;
+  -moz-appearance: none;
+   margin-right: 0.01em;
+
+	margin-bottom:8px;
+  text-align: right;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1em;
+  text-align: left;
+  border: 1px solid #dcdcdc;
+  padding: 5px;
+		
+background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to left, #ccc, #ccc);
+  background-position:
+    calc(100% - 12px),
+    calc(100% - 7px),
+    calc(100% - 1.5em) ;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 2em;
+  background-repeat: no-repeat;
+  
+   -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.dynatable-per-page-select:focus {
+ background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 7px),
+    calc(100% - 12px),
+    calc(100% - 1.5em) ;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 2em;
+  background-repeat: no-repeat;
+}
+
+.dynatable-record-count {
+  margin-top:8px;
+  display: block;
+  padding: 5px 0;
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  color: #34495e;
+  
+   -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.dynatable-pagination-links {
+    margin-right:1px;
+    margin-top:8px;
+    float: right;
+    text-align: right;
+	font-family: Arial,Helvetica,sans-serif;
+	
+	 -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.dynatable-pagination-links a{
+text-decoration: none !important;
+
+ -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.dynatable-pagination-links a {
+    margin-right:-1px;
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-family: Arial,Helvetica,sans-serif;
+    text-align: center;
+    cursor: pointer;
+    *cursor: hand;
+    color: #34495e;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+.dynatable-page-link,
+.dynatable-page-break {
+  display: block;
+}
+
+.dynatable-pagination-links a:hover{
+  background: #fafafa;
+  color: #999;
+}
+.dynatable-page-link {
+  cursor: pointer;
+}
+
+.dynatable-active-page,
+.dynatable-disabled-page {
+  cursor: text;
+  
+}
+
+
+.dynatable-active-page {
+  background: #7f8c8d !important;
+  color: #fff !important;
+}
+
+.dynatable-disabled-page,
+.dynatable-disabled-page:hover {
+  background: #fafafa;
+  color: #999;
+}
+
+.dynatable-record-bounds,
+.no-select{
+ -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.dynatable-pagination-links a::selection,
+.dynatable-search  input::selection,
+option::selection,
+.dynatable-record-count::selection ,
+.dynatable-record-bounds::selection,
+.no-select::selection,
+thead th a::selection
+{
+ background: none;
+  user-select: none; 
+   -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none;     
+        
+}

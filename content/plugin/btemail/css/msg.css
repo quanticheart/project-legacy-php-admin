@@ -1,0 +1,91 @@
+
+/* botao email
+===========================================*/
+/* ############ RESET GLOBAL ################ */
+.erro-form{
+	color:#34495e;
+	
+}
+.msg_input{
+	Padding-left:1px;
+    Padding-right:1px;
+	color:#34495e;
+}
+
+.estado{
+	height:28px;
+Padding-left:25px;
+border:none;
+}
+
+.msg_input input{
+	border:none;
+	padding:4px;
+}
+
+.msg_input textarea{
+	border:none;
+	height:100px;
+	margin-top:1px;
+}
+
+select.estado{
+  padding: 1px;
+ 
+  transition: border 0.3s;
+
+  color:#c9c9c9;
+}
+
+.caixa-email {
+	position: fixed;
+	z-index: 100;
+	bottom: -300px;
+	right: 10px;
+}
+
+.bsub {
+	display: block;
+	overflow: hidden;
+	padding: 0 30px 5 30px;
+	float: right;
+	text-decoration: none !important;
+	line-height: 28px;
+	font: normal 13px/28px "Helvetica Neue", sans-serif;
+	color: #34495e;
+
+	letter-spacing: normal;
+	border: 0;
+	background-color: #ecf0f1;
+	
+}
+
+#bitsubscribe {
+	background: #ecf0f1;
+	color: #fff;
+	padding: 15px;
+	width: 300px;
+	margin-top: 27px;
+	-moz-border-radius: 2px 0 0 0;
+	-webkit-border-radius: 2px 0 0 0;
+	-o-border-radius: 2px 0 0 0;
+	-ms-border-radius: 2px 0 0 0;
+	border-radius: 2px 0 0 0;
+	
+}
+
+.image-email{
+position:absolute;
+right:6.5px;
+top:1px;
+}
+
+.BTEnvia{
+	border-radius:0px;
+}
+
+.BTApaga{
+	border-radius:0px;
+}
+
+

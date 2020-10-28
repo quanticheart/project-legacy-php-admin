@@ -1,0 +1,23 @@
+Header set X-XSS-Protection "1; mode = block"
+#Header set Content-Security-Policy "default-src 'self';"
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+
+ErrorDocument 400 /content/erros/badrequest.html
+ErrorDocument 401 /content/erros/authreqd.html
+ErrorDocument 403 /content/erros/forbid.html
+ErrorDocument 404 http://www.casacerta.esy.es/
+ErrorDocument 500 /content/erros/serverr.html
+
+AddDefaultCharset utf-8
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^casacerta.esy.es [NC]
+RewriteRule ^(.*) http://www.casacerta.esy.es/$1 [L,R=301]
+
+RewriteRule ^sobre$ index.php?link=1
+
+ServerSignature Off
+
+  
+ 

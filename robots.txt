@@ -1,0 +1,12 @@
+# Disallowed and allowed directories and files
+ 
+User-agent: *
+Disallow: /ad/
+Disallow: /content/
+Disallow: /content/page/bloq.php
+Allow: /content/page/
+
+# Define website sitemaps
+ 
+Sitemap: http://casacerta.esy.es/sitemap.xml
+
